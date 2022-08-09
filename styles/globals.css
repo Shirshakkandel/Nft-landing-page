@@ -1,0 +1,81 @@
+/* @import url('https://db.onlinewebfonts.com/c/88978184a438c2447fe0faa001f15a34?family=Futura+Maxi+CG+Bold'); */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,600;0,700;1,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400&family=Source+Sans+Pro:ital,wght@0,300;0,600;0,700;1,200&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Futura;
+  src: url('../fonts/Futura.otf') format('opentype');
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+    --primary-color: #232323;
+    --secondary-color: #c62f42;
+  }
+
+  body {
+    @apply font-raleway;
+  }
+}
+
+@layer components {
+  .section-wrapper {
+    @apply w-[90%] mx-auto max-w-[1536px];
+  }
+  .mt-section {
+    @apply mt-10;
+  }
+  .link {
+    @apply font-raleway font-extrabold text-[16px] leading-[20px] tracking-[1.775px] transition-colors duration-700;
+  }
+  .paragraph {
+    @apply text-base font-bold lg:text-lg;
+  }
+  .heading {
+    @apply text-[25px] lg:text-[40px] leading-[30px] lg:leading-[45px] tracking-[1.275px] font-extrabold text-white capitalize;
+  }
+
+  .roadmap-subheading {
+    @apply text-[14px] lg:text-[18px]  font-bold leading-[16px] lg:leading-[30px] font-raleway tracking-[1.275px] text-white mt-4 w-[130%] lg:w-[150%];
+  }
+
+  .paragraph-large {
+    @apply text-[30px] font-bold leading-[33px] tracking-[1.05px] font-raleway;
+  }
+
+  .collection:first-child,
+  .collection:last-child {
+    @apply w-[206px] h-[421px] bg-black;
+  }
+
+  .collection:nth-child(2) {
+    /* @apply w-[311px] h-[311px]; */
+  }
+
+  .roadmap:after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--primary-color);
+  }
+
+  .roadmap:before {
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--primary-color);
+  }
+}
